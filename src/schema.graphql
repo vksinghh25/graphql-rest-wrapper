@@ -1,0 +1,40 @@
+type Query {
+  todos: [Todo]
+  todo(id: Int!): Todo
+  users: [User]
+  universities: [University]
+  university(name: String!): University
+  vehicles: [Vehicle]
+}
+
+type Mutation {
+  addUniversity(name: String!, city: String!, founded: Int!): University
+}
+
+type Todo {
+  id: Int
+  userId: Int
+  title: String
+  completed: Boolean
+}
+
+type User {
+  userId: Int,
+  username: String,
+  location: String
+  age: Int
+}
+
+type University {
+  name: String,
+  city: String,
+  founded: Int
+}
+
+type Vehicle {
+  id: String!
+  make: String!
+  color: String!
+  model: String!
+  year: Int!
+}
